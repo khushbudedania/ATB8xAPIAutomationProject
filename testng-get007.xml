@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Admin/IdeaProjects/ATB8xAPIAutomationProject">
+        <classes>
+            <class name="org.example.samplecheck.RestAssuredBasics.GET.APITest007_GET_NonBDDStyle">
+                <methods>
+                </methods>
+            </class>
+            </classes></test></suite>
