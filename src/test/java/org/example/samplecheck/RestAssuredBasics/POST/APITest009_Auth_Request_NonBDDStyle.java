@@ -5,7 +5,7 @@ import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
-public class APITest009_NonBDDStyle {
+public class APITest009_Auth_Request_NonBDDStyle {
     @Description("tc- 1 NonBDDStyle Auth Request Test Case")
     @Test
     public void Test_NonBDDStyle() {

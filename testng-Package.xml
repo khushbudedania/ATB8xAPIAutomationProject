@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Admin/IdeaProjects/ATB8xAPIAutomationProject">
+        <packages>
+            <package name="org.example.samplecheck.TeastNGExamples"/>
+
+        </packages>
+        <classes>
+            <class name="org.example.samplecheck.RestAssuredBasics.GET.APITest005_GET_TestNG">
+
+            </class>
+           </classes></test></suite>
+
+//run all the file in lo9 0vTddeastNGExamples.

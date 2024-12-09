@@ -10,12 +10,13 @@ public class APITest008_BDDStyle {
 
 
     @Description("tc- 1 BDDStyle Auth Request Test Case")
-    @Test
+    @Test// THIS ANNOTATION ALLURE IDENTIFY THE TEST CASE.
     public void Test_BDDStyle() {
 
-      /*  String Payload = { "username" : "admin";
-                "password" : "password123"
-};*/
+        String Payload = "{\n" +
+                "    \"username\" : \"admin\",\n" +
+                "    \"password\" : \"password123\"\n" +
+                "}";
 
 
 
@@ -24,7 +25,7 @@ public class APITest008_BDDStyle {
                     .baseUri("https://restful-booker.herokuapp.com")
                     .basePath("/auth")
                     .contentType("application/json")
-               // .log().all().body()
+                .log().all().body(Payload)
                 .when()
                     .log().all().post()
                 .then()
