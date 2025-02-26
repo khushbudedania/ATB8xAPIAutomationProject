@@ -7,16 +7,19 @@ public class APITest_027_TestNG_AlwaysRun {
 
     @Test
         public void test01(){
-            Assert.assertTrue(true);
+        System.out.println(1);
+            Assert.assertTrue(false);
         }
 
-        @Test(alwaysRun = true)
+        @Test(dependsOnMethods = "test01",alwaysRun = true)
         public void test02(){
+            System.out.println(2);
             Assert.assertTrue(true);
         }
 
         @Test
         public void test03(){
+            System.out.println(3);
             Assert.assertTrue(true);
         }
     }

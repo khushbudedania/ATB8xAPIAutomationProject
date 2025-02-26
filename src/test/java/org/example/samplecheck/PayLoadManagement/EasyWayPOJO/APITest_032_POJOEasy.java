@@ -28,6 +28,7 @@ public class APITest_032_POJOEasy {
             BookingDates bookingdates = new BookingDates();
             bookingdates.setCheckin("2024-02-01");
             bookingdates.setCheckout("2024-02-01");
+
             booking.setBookingdates(bookingdates);
             booking.setAdditionalneeds("Breakfast");
 
@@ -42,11 +43,11 @@ public class APITest_032_POJOEasy {
 
             Response response = requestSpecification.when().post();
 
-            Integer bookingId = response.then().extract().path("bookingid");
-
             // Get Validatable response to perform validation
             validatableResponse = response.then().log().all();
             validatableResponse.statusCode(200);
+
+            Integer bookingId = response.then().extract().path("bookingid");
             System.out.println("Your Booking Id is -> " +  bookingId);
         }
     }

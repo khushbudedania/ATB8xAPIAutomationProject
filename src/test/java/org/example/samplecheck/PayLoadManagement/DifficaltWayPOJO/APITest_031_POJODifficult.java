@@ -1,7 +1,7 @@
 package org.example.samplecheck.PayLoadManagement.DifficaltWayPOJO;
 
-//import com.thetestingacademy.payLoadMangement.gson.Booking;
-//import com.thetestingacademy.payLoadMangement.gson.Bookingdates;
+import org.example.samplecheck.PayLoadManagement.DifficaltWayPOJO.Booking;
+import org.example.samplecheck.PayLoadManagement.DifficaltWayPOJO.BookingDates;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;

@@ -15,8 +15,8 @@ public class APITest_012_UpdateBooking {
 
         public void  test_update_Booking()
         {
-            String Token = "7f5f3f59da00e83";
-            String Booking_ID = "774";
+            String Token ="9d0d1d5b841bcc3";
+            String Booking_ID = "928";
 
             String Payload = "{\n" +
                     "    \"firstname\" : \"chirag\",\n" +

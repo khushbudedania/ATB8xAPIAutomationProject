@@ -8,7 +8,7 @@ public class APITest_024_TestNG_DependsOnMethod {
         @Test
         public void serverStartedOk() {
             System.out.println("I will run first");
-            Assert.assertTrue(true);
+            Assert.assertTrue(false);
         }
 
         @Test(dependsOnMethods = "serverStartedOk")
@@ -23,4 +23,5 @@ public class APITest_024_TestNG_DependsOnMethod {
             Assert.assertTrue(true);
         }
     }
-
+//Dependsonmethods depend on other method.
+//if the method is false then the remaining method dosen't run.

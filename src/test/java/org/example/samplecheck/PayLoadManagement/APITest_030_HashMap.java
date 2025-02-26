@@ -1,6 +1,5 @@
 package org.example.samplecheck.PayLoadManagement;
 
-
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -61,11 +60,11 @@ public class   APITest_030_HashMap {
 
         Response response = requestSpecification.when().post();
 
-        Integer bookingId = response.then().extract().path("bookingid");
-
         // Get Validatable response to perform validation
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
+
+        Integer bookingId = response.then().extract().path("bookingid");
         System.out.println("Your Booking Id is -> " + bookingId);
     }
 }

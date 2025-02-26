@@ -51,7 +51,6 @@ public class APOITest_030_Assertion {
 
 
             // Validatable Response - I - Hamcrest - Rest Assured
-
             // Rest Assured Default - Hamcrest
             // import org.hamcrest.Matchers;
 
@@ -60,17 +59,13 @@ public class APOITest_030_Assertion {
             validatableResponse.body("booking.depositpaid",Matchers.equalTo(false));
             validatableResponse.body("bookingid",Matchers.notNullValue());
 
-
-
-
-
+            //Extract the data from the response
 
             bookingId = response.then().extract().path("bookingid");
             String firstname = response.then().extract().path("booking.firstname");
             String lastname = response.then().extract().path("booking.lastname");
 
-
-
+            //TestNG
 
             Assert.assertNotNull(bookingId);
             Assert.assertEquals(firstname,"Pramod");
@@ -101,4 +96,4 @@ public class APOITest_030_Assertion {
 
 //extract data can do two way.
 //1) json path
-//2) extract path
+//2) extract() fun.

@@ -9,13 +9,13 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
 public class APITest_011_UpdateBooking_NonBDDStyle {
+
     @Description("Tc_1 Verify the PUT Request for the Booking")
     @Test
-
     public void  test_update_Booking()
     {
-        String Token = "4817972b7d2b32e";
-        String Booking_ID = "526";
+        String Token = "8016eef7428f6b3";
+        String Booking_ID = "4287";
 
         String Payload = "{\n" +
                 "    \"firstname\" : \"KHUSHBU\",\n" +

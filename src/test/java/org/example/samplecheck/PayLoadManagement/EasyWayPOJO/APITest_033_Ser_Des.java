@@ -60,7 +60,7 @@ public class APITest_033_Ser_Des {
             System.out.println(jsonStringBooking);
 
 
-           requestSpecification = RestAssured.given();
+            requestSpecification = RestAssured.given();
             requestSpecification.baseUri("https://restful-booker.herokuapp.com/");
             requestSpecification.basePath("booking");
             requestSpecification.contentType(ContentType.JSON);
@@ -78,7 +78,7 @@ public class APITest_033_Ser_Des {
             //2)jsonPath().getString()
 
 
-            //Case-2- Response Compex JSON,Huge JSON
+            //Case-2- Response Complex JSON,Huge JSON
             // String -> Object == De Ser(you need to create new class BookingResponse class )
 
             BookingResponce bookingResponce = gson.fromJson(jsonResponseString, BookingResponce.class);

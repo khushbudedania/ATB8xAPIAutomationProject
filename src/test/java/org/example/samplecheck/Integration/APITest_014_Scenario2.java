@@ -7,6 +7,7 @@ import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import jdk.jfr.Description;
 import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.*;
 
 public class APITest_014_Scenario2 {
          //Create Booking (POST)
@@ -45,7 +46,13 @@ public class APITest_014_Scenario2 {
               validatableResponse.statusCode(200);
 
               bookingid = response.jsonPath().getString("bookingid");
+              String firstname = response.jsonPath().getString("booking.firstname");
+
               System.out.println("BookingId = " +bookingid);
+
+
+              assertThat(firstname).isEqualTo("Jim");
+
               return bookingid;
           }
           @Description("Verify the Booking by GET Request")

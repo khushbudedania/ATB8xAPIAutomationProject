@@ -1,6 +1,7 @@
 package org.example.samplecheck.TeastNGExamples;
 
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 

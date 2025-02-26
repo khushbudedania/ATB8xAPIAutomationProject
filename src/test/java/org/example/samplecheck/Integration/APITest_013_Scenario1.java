@@ -42,13 +42,14 @@ public class APITest_013_Scenario1 {
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
 
-        token = response.jsonPath().getString("token");
+        token = response.jsonPath().getString("token");//extract the token
         System.out.println("Token = " +token);
 
         return token;
     }
 
     public String getbookingId() {
+
         String Payload = "{\n" +
                 "    \"firstname\" : \"Jim\",\n" +
                 "    \"lastname\" : \"Brown\",\n" +
@@ -72,10 +73,8 @@ public class APITest_013_Scenario1 {
         validatableResponse = response.then().log().all();
         validatableResponse.statusCode(200);
 
-        bookingId = response.jsonPath().getString("bookingid");
+        bookingId = response.jsonPath().getString("bookingid");//extract bookingid from the response
         System.out.println("BookingId = " +bookingId);
-
-
 
         return bookingId;
     }
@@ -118,11 +117,11 @@ public class APITest_013_Scenario1 {
         String bookingdates = response.jsonPath().getString("bookingdates.checkin");
 
 
-       // assertThat(token).isEqualTo("   ");
+        assertThat(token).isEqualTo(token);
         assertThat(token).isNotBlank().isNotNull().isNotEmpty();
         assertThat(bookingId).isNotEmpty().isNotNull().isNotBlank();
         assertThat(bookingId).toString();
-       // assertThat(bookingId).isEqualTo("123");
+        assertThat(bookingId).isEqualTo(bookingId);
         assertThat(firstname).isEqualTo("myra");
         assertThat(lastname).isEqualTo("Dedania");
         assertThat(totalprice).isNotEmpty().isNotNull().isNotBlank();
@@ -136,6 +135,7 @@ public class APITest_013_Scenario1 {
     @Test(priority = 2)
     public void test_get_Request()//after put
     {
+       // bookingId = getbookingId();//if we use a getbookingId function here then they generate the new booking id.
         System.out.println(bookingId);
 
         requestSpecification = RestAssured.given();
@@ -146,6 +146,8 @@ public class APITest_013_Scenario1 {
         requestSpecification.then().log().all().statusCode(200);
 
         String firstname = response.jsonPath().getString("firstname");
+        System.out.println(firstname);
+
         Assert.assertEquals(firstname,"myra");
     }
 
@@ -173,7 +175,7 @@ public class APITest_013_Scenario1 {
     @Test(priority = 4)
     public void test_get_Request_afterDelete()
     {
-        System.out.println(bookingId);
+        //System.out.println(bookingId);
 
         requestSpecification = RestAssured.given();
         requestSpecification.baseUri("https://restful-booker.herokuapp.com");
